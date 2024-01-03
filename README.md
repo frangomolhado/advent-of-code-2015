@@ -29,4 +29,5 @@ cargo run --bin day1
 ## Puzzles
 
 - Day 1: Not Quite Lisp - [Code](src/day01/main.rs) - [Instructions](https://adventofcode.com/2015/day/1)
+- Day 2: I Was Told There Would Be No Math - [Code](src/day02/main.rs) - [Instructions](https://adventofcode.com/2015/day/2)
 
