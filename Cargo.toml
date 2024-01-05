@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+md5 = "0.7.0"
 
 [[bin]]
 name = "day1"
@@ -16,3 +17,7 @@ path = "src/day02/main.rs"
 [[bin]]
 name = "day3"
 path = "src/day03/main.rs"
+
+[[bin]]
+name = "day4"
+path = "src/day04/main.rs"

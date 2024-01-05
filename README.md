@@ -31,4 +31,5 @@ cargo run --bin day1
 1. Not Quite Lisp - [Code](src/day01/main.rs) - [Instructions](https://adventofcode.com/2015/day/1)
 2. I Was Told There Would Be No Math - [Code](src/day02/main.rs) - [Instructions](https://adventofcode.com/2015/day/2)
 3. Perfectly Spherical Houses in a Vacuum - [Code](src/day03/main.rs) - [Instructions](https://adventofcode.com/2015/day/3)
+4. The Ideal Stocking Stuffer - [Code](src/day04/main.rs) - [Instructions](https://adventofcode.com/2015/day/4)
 
