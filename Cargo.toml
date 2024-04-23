@@ -7,21 +7,25 @@ edition = "2021"
 md5 = "0.7.0"
 
 [[bin]]
-name = "day1"
+name = "day01"
 path = "src/day01/main.rs"
 
 [[bin]]
-name = "day2"
+name = "day02"
 path = "src/day02/main.rs"
 
 [[bin]]
-name = "day3"
+name = "day03"
 path = "src/day03/main.rs"
 
 [[bin]]
-name = "day4"
+name = "day04"
 path = "src/day04/main.rs"
 
 [[bin]]
-name = "day5"
+name = "day05"
 path = "src/day05/main.rs"
+
+[[bin]]
+name = "day06"
+path = "src/day06/main.rs"
