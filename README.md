@@ -36,3 +36,5 @@ go run 2015/day01/main.go
 
 1. Not Quite Lisp - [Code](2015/day01/main.go) -
    [Instructions](https://adventofcode.com/2015/day/1)
+2. I Was Told There Would Be No Math - [Code](2015/day02/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/2)

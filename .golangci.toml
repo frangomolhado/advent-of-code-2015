@@ -54,7 +54,6 @@ enable = [
     "makezero",
     "mirror",
     "misspell",
-    "mnd",
     "musttag",
     "nestif",
     "nilnil",
