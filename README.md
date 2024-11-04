@@ -40,3 +40,5 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/2)
 3. Perfectly Spherical Houses in a Vacuum - [Code](2015/day03/main.go) -
    [Instructions](https://adventofcode.com/2015/day/3)
+4. The Ideal Stocking Stuffer - [Code](2015/day04/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/4)

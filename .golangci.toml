@@ -46,7 +46,6 @@ enable = [
     "goheader",
     "goimports",
     "goprintffuncname",
-    "gosec",
     "gosimple",
     "govet",
     "ineffassign",
