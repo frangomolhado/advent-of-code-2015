@@ -38,3 +38,5 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/1)
 2. I Was Told There Would Be No Math - [Code](2015/day02/main.go) -
    [Instructions](https://adventofcode.com/2015/day/2)
+3. Perfectly Spherical Houses in a Vacuum - [Code](2015/day03/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/3)
