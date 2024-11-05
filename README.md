@@ -42,3 +42,5 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/3)
 4. The Ideal Stocking Stuffer - [Code](2015/day04/main.go) -
    [Instructions](https://adventofcode.com/2015/day/4)
+5. Doesn't He Have Intern-Elves For This? - [Code](2015/day05/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/5)
