@@ -44,3 +44,5 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/4)
 5. Doesn't He Have Intern-Elves For This? - [Code](2015/day05/main.go) -
    [Instructions](https://adventofcode.com/2015/day/5)
+6. Probably a Fire Hazard - [Code](2015/day06/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/6)
