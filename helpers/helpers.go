@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Readfile returns the content of the file as a string, trimming the line feed
+// ReadFile returns the content of the file as a string, trimming the line feed
 // at the end and panicking on error.
 func ReadFile(path string) string {
 	content, err := os.ReadFile(path)

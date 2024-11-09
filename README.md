@@ -46,3 +46,7 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/5)
 6. Probably a Fire Hazard - [Code](2015/day06/main.go) -
    [Instructions](https://adventofcode.com/2015/day/6)
+7. Some Assembly Required - Code -
+   [Instructions](https://adventofcode.com/2015/day/7)
+8. Matchsticks - [Code](2015/day08/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/8)

@@ -2,7 +2,7 @@
 sections = ["standard", "default", "prefix(github.com/leakedmemory/aoc)"]
 
 [linters-settings.gocritic]
-disabled-checks = ["hugeParam"]
+disabled-checks = ["hugeParam", "ifElseChain"]
 enabled-tags = ["performance"]
 
 [linters-settings.govet]
