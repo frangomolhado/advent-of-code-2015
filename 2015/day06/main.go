@@ -12,7 +12,6 @@ func part1(input string) int {
 	lights := [1000][1000]int{}
 	for _, line := range strings.Split(input, "\n") {
 		splitLine := strings.Split(line, " ")
-		//nolint:gocritic
 		if splitLine[0] == "toggle" {
 			fromX, fromY := getCoordinates(splitLine[1])
 			toX, toY := getCoordinates(splitLine[3])
@@ -53,7 +52,6 @@ func part2(input string) int {
 	lights := [1000][1000]int{}
 	for _, line := range strings.Split(input, "\n") {
 		splitLine := strings.Split(line, " ")
-		//nolint:gocritic
 		if splitLine[0] == "toggle" {
 			fromX, fromY := getCoordinates(splitLine[1])
 			toX, toY := getCoordinates(splitLine[3])

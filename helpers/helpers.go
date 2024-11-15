@@ -16,3 +16,10 @@ func ReadFile(path string) string {
 
 	return strings.TrimRight(string(content), "\n")
 }
+
+// ReadLines returns the content of the file as a string, trimming the line feed
+// at the end, splitting using the line feed character as separator, and
+// panicking on error.
+func ReadLines(path string) []string {
+	return strings.Split(ReadFile(path), "\n")
+}
