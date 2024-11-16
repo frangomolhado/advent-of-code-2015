@@ -50,3 +50,7 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/7)
 8. Matchsticks - [Code](2015/day08/main.go) -
    [Instructions](https://adventofcode.com/2015/day/8)
+9. All in a Single Night - [Code](2015/day09/main.go) -
+   [Instructions](https://adventofcode.com/2015/day/9)
+10. Elves Look, Elves Say - [Code](2015/day10/main.go) -
+    [Instructions](https://adventofcode.com/2015/day/10)
