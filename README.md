@@ -54,3 +54,7 @@ go run 2015/day01/main.go
    [Instructions](https://adventofcode.com/2015/day/9)
 10. Elves Look, Elves Say - [Code](2015/day10/main.go) -
     [Instructions](https://adventofcode.com/2015/day/10)
+11. Corporate Policy - Code -
+    [Instructions](https://adventofcode.com/2015/day/11)
+12. JSAbacusFramework.io - [Code](2015/day12/main.go) -
+    [Instructions](https://adventofcode.com/2015/day/12)
