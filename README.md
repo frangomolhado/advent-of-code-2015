@@ -34,27 +34,17 @@ go run 2015/day01/main.go
 
 ### 2015
 
-1. Not Quite Lisp - [Code](2015/day01/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/1)
-2. I Was Told There Would Be No Math - [Code](2015/day02/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/2)
-3. Perfectly Spherical Houses in a Vacuum - [Code](2015/day03/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/3)
-4. The Ideal Stocking Stuffer - [Code](2015/day04/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/4)
-5. Doesn't He Have Intern-Elves For This? - [Code](2015/day05/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/5)
-6. Probably a Fire Hazard - [Code](2015/day06/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/6)
-7. Some Assembly Required - Code -
-   [Instructions](https://adventofcode.com/2015/day/7)
-8. Matchsticks - [Code](2015/day08/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/8)
-9. All in a Single Night - [Code](2015/day09/main.go) -
-   [Instructions](https://adventofcode.com/2015/day/9)
-10. Elves Look, Elves Say - [Code](2015/day10/main.go) -
-    [Instructions](https://adventofcode.com/2015/day/10)
-11. Corporate Policy - Code -
-    [Instructions](https://adventofcode.com/2015/day/11)
-12. JSAbacusFramework.io - [Code](2015/day12/main.go) -
-    [Instructions](https://adventofcode.com/2015/day/12)
+01\. [Not Quite Lisp](2015/day01/main.go) \
+02\. [I Was Told There Would Be No Math](2015/day02/main.go) \
+03\. [Perfectly Spherical Houses in a Vacuum](2015/day03/main.go) \
+04\. [The Ideal Stocking Stuffer](2015/day04/main.go) \
+05\. [Doesn't He Have Intern-Elves For This?](2015/day05/main.go) \
+06\. [Probably a Fire Hazard](2015/day06/main.go) \
+08\. [Matchsticks](2015/day08/main.go) \
+09\. [All in a Single Night](2015/day09/main.go) \
+10\. [Elves Look, Elves Say](2015/day10/main.go) \
+12\. [JSAbacusFramework.io](2015/day12/main.go)
+
+### 2024
+
+01\. [Historian Hysteria](2024/day01/main.go)
