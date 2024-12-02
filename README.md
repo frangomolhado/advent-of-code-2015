@@ -47,4 +47,5 @@ go run 2015/day01/main.go
 
 ### 2024
 
-01\. [Historian Hysteria](2024/day01/main.go)
+01\. [Historian Hysteria](2024/day01/main.go) \
+02\. [Red-Nosed Reports](2024/day02/main.go)

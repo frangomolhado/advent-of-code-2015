@@ -3,6 +3,7 @@ package helpers
 import (
 	"log"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -22,4 +23,20 @@ func ReadFile(path string) string {
 // panicking on error.
 func ReadLines(path string) []string {
 	return strings.Split(ReadFile(path), "\n")
+}
+
+// SliceAtoi applies strconv.Atoi to all the values of a slice and returns a
+// new one with the values as integers. Panics on conversion errors.
+func SliceAtoi(slice []string) []int {
+	result := make([]int, 0, len(slice))
+	for _, s := range slice {
+		n, err := strconv.Atoi(s)
+		if err != nil {
+			log.Fatalln(err)
+		}
+
+		result = append(result, n)
+	}
+
+	return result
 }
