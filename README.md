@@ -16,6 +16,11 @@ Each branch is related to the programming language used to solve the problem. If
 some solution is not here, maybe it's solved in another language or not solved
 at all.
 
+### Branches
+
+- [Go](https://github.com/leakedmemory/aoc/tree/go)
+- [Rust](https://github.com/leakedmemory/aoc/tree/rust)
+
 ## Running
 
 To run the solution of a day, enter a command with the following format:
@@ -48,4 +53,5 @@ go run 2015/day01/main.go
 ### 2024
 
 01\. [Historian Hysteria](2024/day01/main.go) \
-02\. [Red-Nosed Reports](2024/day02/main.go)
+02\. [Red-Nosed Reports](2024/day02/main.go) \
+03\. [Mull It Over](2024/day03/main.go)
