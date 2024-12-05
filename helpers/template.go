@@ -21,7 +21,7 @@ package helpers
 // }
 //
 // func main() {
-// 	lines := helpers.ReadLines("YYYY/dayDD/input.txt")
+// 	lines := helpers.ReadLines("YYYY/dayDD/example.txt")
 //
 // 	fmt.Printf("part1: %v\n", part1(lines))
 // 	fmt.Printf("part2: %v\n", part2(lines))

@@ -24,28 +24,24 @@ func part1(lines []string) int {
 func isSafe(levels []int) bool {
 	ascending := levels[0] < levels[1]
 	lastLevel := levels[0]
-	safe := true
 	for _, currLevel := range levels[1:] {
 		if ascending && currLevel < lastLevel {
-			safe = false
-			break
+			return false
 		}
 
 		if !ascending && lastLevel < currLevel {
-			safe = false
-			break
+			return false
 		}
 
 		distance := int(math.Abs(float64(currLevel - lastLevel)))
 		if distance == 0 || distance > 3 {
-			safe = false
-			break
+			return false
 		}
 
 		lastLevel = currLevel
 	}
 
-	return safe
+	return true
 }
 
 func part2(lines []string) int {
@@ -75,7 +71,6 @@ func isSafeWithOneRemoval(levels []int) bool {
 
 func main() {
 	lines := helpers.ReadLines("2024/day02/input.txt")
-	// lines := helpers.ReadLines("2024/day02/example.txt")
 
 	fmt.Printf("part1: %v\n", part1(lines))
 	fmt.Printf("part2: %v\n", part2(lines))

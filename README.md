@@ -54,4 +54,5 @@ go run 2015/day01/main.go
 
 01\. [Historian Hysteria](2024/day01/main.go) \
 02\. [Red-Nosed Reports](2024/day02/main.go) \
-03\. [Mull It Over](2024/day03/main.go)
+03\. [Mull It Over](2024/day03/main.go) \
+04\. [Ceres Search](2024/day04/main.go)
