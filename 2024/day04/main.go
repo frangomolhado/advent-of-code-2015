@@ -12,35 +12,35 @@ func part1(lines []string) int {
 		for column, c := range line {
 			//nolint:nestif
 			if c == 'X' {
-				if isXMASRow(line, column) {
+				if isRow("XMAS", line, column) {
 					result++
 				}
 
-				if isXMASColumn(lines[row+1:min(row+4, len(lines))], column) {
+				if isColumn("MAS", lines[row+1:min(row+4, len(lines))], column) {
 					result++
 				}
 
-				if isXMASRightDiagonal(lines[row+1:min(row+4, len(lines))], column+1) {
+				if isRightDiagonal("MAS", lines[row+1:min(row+4, len(lines))], column+1) {
 					result++
 				}
 
-				if isXMASLeftDiagonal(lines[row+1:min(row+4, len(lines))], column-1) {
+				if isLeftDiagonal("MAS", lines[row+1:min(row+4, len(lines))], column-1) {
 					result++
 				}
 			} else if c == 'S' {
-				if isSAMXRow(line, column) {
+				if isRow("SAMX", line, column) {
 					result++
 				}
 
-				if isSAMXColumn(lines[row+1:min(row+4, len(lines))], column) {
+				if isColumn("AMX", lines[row+1:min(row+4, len(lines))], column) {
 					result++
 				}
 
-				if isSAMXRightDiagonal(lines[row+1:min(row+4, len(lines))], column+1) {
+				if isRightDiagonal("AMX", lines[row+1:min(row+4, len(lines))], column+1) {
 					result++
 				}
 
-				if isSAMXLeftDiagonal(lines[row+1:min(row+4, len(lines))], column-1) {
+				if isLeftDiagonal("AMX", lines[row+1:min(row+4, len(lines))], column-1) {
 					result++
 				}
 			}
@@ -50,63 +50,37 @@ func part1(lines []string) int {
 	return result
 }
 
-func isXMASRow(line string, column int) bool {
-	return len(line)-column > 3 && line[column:column+4] == "XMAS"
+func isRow(target, line string, column int) bool {
+	return len(line)-column > 3 && line[column:column+4] == target
 }
 
-func isXMASColumn(lines []string, column int) bool {
+func isColumn(target string, lines []string, column int) bool {
 	return len(lines) == 3 &&
-		lines[0][column] == 'M' &&
-		lines[1][column] == 'A' &&
-		lines[2][column] == 'S'
+		lines[0][column] == target[0] &&
+		lines[1][column] == target[1] &&
+		lines[2][column] == target[2]
 }
 
-func isXMASRightDiagonal(lines []string, column int) bool {
-	return len(lines) == 3 &&
-		len(lines[0])-column >= 3 &&
-		lines[0][column] == 'M' &&
-		lines[1][column+1] == 'A' &&
-		lines[2][column+2] == 'S'
-}
-
-func isXMASLeftDiagonal(lines []string, column int) bool {
-	return len(lines) == 3 && column >= 2 &&
-		lines[0][column] == 'M' &&
-		lines[1][column-1] == 'A' &&
-		lines[2][column-2] == 'S'
-}
-
-func isSAMXRow(line string, column int) bool {
-	return len(line)-column > 3 && line[column:column+4] == "SAMX"
-}
-
-func isSAMXColumn(lines []string, column int) bool {
-	return len(lines) == 3 &&
-		lines[0][column] == 'A' &&
-		lines[1][column] == 'M' &&
-		lines[2][column] == 'X'
-}
-
-func isSAMXRightDiagonal(lines []string, column int) bool {
+func isRightDiagonal(target string, lines []string, column int) bool {
 	return len(lines) == 3 &&
 		len(lines[0])-column >= 3 &&
-		lines[0][column] == 'A' &&
-		lines[1][column+1] == 'M' &&
-		lines[2][column+2] == 'X'
+		lines[0][column] == target[0] &&
+		lines[1][column+1] == target[1] &&
+		lines[2][column+2] == target[2]
 }
 
-func isSAMXLeftDiagonal(lines []string, column int) bool {
+func isLeftDiagonal(target string, lines []string, column int) bool {
 	return len(lines) == 3 && column >= 2 &&
-		lines[0][column] == 'A' &&
-		lines[1][column-1] == 'M' &&
-		lines[2][column-2] == 'X'
+		lines[0][column] == target[0] &&
+		lines[1][column-1] == target[1] &&
+		lines[2][column-2] == target[2]
 }
 
 func part2(lines []string) int {
 	result := 0
 	for row, line := range lines[1 : len(lines)-1] {
 		for column, c := range line[1 : len(line)-1] {
-			if c == 'A' && isXMASCrux(lines[row:row+3], column+1) {
+			if c == 'A' && isCrux(lines[row:row+3], column+1) {
 				result++
 			}
 		}
@@ -115,7 +89,7 @@ func part2(lines []string) int {
 	return result
 }
 
-func isXMASCrux(lines []string, column int) bool {
+func isCrux(lines []string, column int) bool {
 	if lines[0][column-1] != 'M' && lines[0][column-1] != 'S' {
 		return false
 	}
