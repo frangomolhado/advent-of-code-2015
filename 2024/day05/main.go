@@ -37,15 +37,19 @@ func parseInput(input string) (map[int][]int, [][]int) {
 	return graph, updateList
 }
 
-func part1(graph map[int][]int, updates [][]int) int {
-	result := 0
+func day05(graph map[int][]int, updates [][]int) (int, int) {
+	part1 := 0
+	part2 := 0
 	for _, update := range updates {
 		if isCorrectOrder(graph, update) {
-			result += update[len(update)/2]
+			part1 += update[len(update)/2]
+		} else {
+			sorted := topologicalSort(graph, update)
+			part2 += sorted[len(sorted)/2]
 		}
 	}
 
-	return result
+	return part1, part2
 }
 
 func isCorrectOrder(graph map[int][]int, update []int) bool {
@@ -67,36 +71,23 @@ func isCorrectOrder(graph map[int][]int, update []int) bool {
 	return true
 }
 
-func part2(graph map[int][]int, updates [][]int) int {
-	result := 0
-	for _, update := range updates {
-		if !isCorrectOrder(graph, update) {
-			sorted := topologicalSort(graph, update)
-			result += sorted[len(sorted)/2]
-		}
-	}
-
-	return result
-}
-
 func topologicalSort(graph map[int][]int, update []int) []int {
-	pos := make(map[int]int)
+	pagesPos := make(map[int]int)
 	for i, page := range update {
-		pos[page] = i
+		pagesPos[page] = i
 	}
 
 	inDegree := make(map[int]int)
 	for x, ys := range graph {
-		if _, ok := pos[x]; ok {
+		if _, ok := pagesPos[x]; ok {
 			for _, y := range ys {
-				if _, ok := pos[y]; ok {
+				if _, ok := pagesPos[y]; ok {
 					inDegree[y]++
 				}
 			}
 		}
 	}
 
-	// initialize queue with nodes that have no dependencies
 	queue := []int{}
 	for _, page := range update {
 		if inDegree[page] == 0 {
@@ -105,31 +96,23 @@ func topologicalSort(graph map[int][]int, update []int) []int {
 	}
 
 	sorted := []int{}
-	visited := make(map[int]bool)
 	for len(queue) > 0 {
 		minPos := len(update)
 		minIdx := 0
 		for i, node := range queue {
-			if pos[node] < minPos {
-				minPos = pos[node]
+			if pagesPos[node] < minPos {
+				minPos = pagesPos[node]
 				minIdx = i
 			}
 		}
 
 		node := queue[minIdx]
 		queue = append(queue[:minIdx], queue[minIdx+1:]...)
-
-		if !visited[node] {
-			sorted = append(sorted, node)
-			visited[node] = true
-
-			for _, neighbor := range graph[node] {
-				if !visited[neighbor] {
-					inDegree[neighbor]--
-					if inDegree[neighbor] == 0 {
-						queue = append(queue, neighbor)
-					}
-				}
+		sorted = append(sorted, node)
+		for _, neighbor := range graph[node] {
+			inDegree[neighbor]--
+			if inDegree[neighbor] == 0 {
+				queue = append(queue, neighbor)
 			}
 		}
 	}
@@ -139,8 +122,7 @@ func topologicalSort(graph map[int][]int, update []int) []int {
 
 func main() {
 	input := helpers.ReadFile("2024/day05/input.txt")
-
 	graph, updates := parseInput(input)
-	fmt.Printf("part1: %v\n", part1(graph, updates))
-	fmt.Printf("part2: %v\n", part2(graph, updates))
+	p1, p2 := day05(graph, updates)
+	fmt.Printf("part1: %v\npart2: %v\n", p1, p2)
 }
